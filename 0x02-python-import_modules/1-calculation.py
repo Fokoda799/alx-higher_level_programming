@@ -1,18 +1,9 @@
 #!/usr/bin/python3
-from calculator_1 import add, sub, mul, div
-
-a = 10
-b = 5
-op = ["+", "-", "*", "/"]
-
-for o in op:
-    if o == "+":
-        r = add(a, b)
-    elif o == "-":
-        r = sub(a, b)
-    elif o == "*":
-        r = mul(a, b)
-    else:
-        r = div(a, b)
-
-    print("{} {} {} = {}".format(a, o, b, r))
+if __name__ == "__main__":
+    from calculator_1 import add, div, sub, mul
+    a = 10
+    b = 5
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
