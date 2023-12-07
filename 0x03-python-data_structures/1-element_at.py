@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+# 1-element_at.py
+
 def element_at(my_list, idx):
-    if idx < 0:
+    """Replace the element at a certain position"""
+    lenghth = len(my_list)
+    if idx > (lenghth - 1) or idx < 0:
         return None
-    if idx > len(my_list):
-        return None
-    for i, el in enumerate(my_list, start=0):
-        if i == idx:
-            return el
+    else:
+        return my_list[idx]
