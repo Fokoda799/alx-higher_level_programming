@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Rectangle """
 
+
 class Rectangle:
     """ Rectangle Class """
 
@@ -47,13 +48,12 @@ class Rectangle:
     def area(self):
         """ Return the Area of the rectangle"""
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """ Return the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height) * 2
-
 
     def __str__(self):
         """ Return the shape of # based on the h/w """
