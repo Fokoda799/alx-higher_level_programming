@@ -65,4 +65,3 @@ class Rectangle:
 
     def __repr__(self):
         return f"Rectangle({str(self.__width)}, {str(self.__height)})"
-
