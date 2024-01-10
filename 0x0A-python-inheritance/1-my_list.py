@@ -13,4 +13,4 @@ class MyList(list):
             sorted list"""
 
         sortedList = sorted(self)
-        print (f"{sortedList}")
+        print ({sortedList})
