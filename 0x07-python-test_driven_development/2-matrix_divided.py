@@ -8,7 +8,6 @@
 
 def matrix_divided(matrix, div):
     """Matrix divider module
-    
     """
 
     m = 'matrix must be a matrix (list of lists) of integers/floats'
