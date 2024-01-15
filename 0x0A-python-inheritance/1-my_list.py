@@ -10,8 +10,7 @@ class MyList(list):
         super().__init__(*args, **kwargs)
 
     def print_sorted(self):
-        """ Function that print,
-            sorted list"""
+        """Function that prints a sorted list"""
+        sorted_list = sorted(self)
+        print(sorted_list)
 
-        sortedList = sorted(self)
-        print({sortedList})
