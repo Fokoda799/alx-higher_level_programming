@@ -1,26 +1,13 @@
 #!/usr/bin/python3
-"""Geometry module"""
-
-
-class BaseGeometry:
-    """Geometry module"""
-
-    def area(self):
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        self.name = name
-        if type(value) is not int:
-            raise TypeError(f"{self.name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{self.name} must be greater than 0")
+" lwirata "
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle"""
-
+    '''A subclass representing a rectangle.'''
     def __init__(self, width, height):
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
-        self.__width = width
+        super().__init__()
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__height = height
+        self.__weight = width
