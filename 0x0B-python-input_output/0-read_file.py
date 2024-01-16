@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-"""Read file"""
+" read file "
 
 
 def read_file(filename=""):
-    """Read a text file and
-    prints it to stdout """
-
-    with open(filename, 'r') as file:
-        text = file.read()
-
-    print(text)
+    "readfile from a txt file"
+    with open(filename, "r", encoding="utf-8") as file:
+        print(file.read(), end="")
