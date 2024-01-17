@@ -8,12 +8,12 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Private instance attributes"""
-        dict = {'width':width, 'height':height, 'x':x, 'y':y}
+        dict = {'width': width, 'height': height, 'x': x, 'y': y}
         for attr in dict:
             self.int_validation(attr, dict[attr])
             self.pos_validation(attr, dict[attr])
         self.__width = width
-        self.__height = height 
+        self.__height = height
         self.__x = x
         self.__y = y
         super().__init__(id)
