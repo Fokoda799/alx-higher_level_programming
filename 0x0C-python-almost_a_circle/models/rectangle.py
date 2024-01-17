@@ -12,11 +12,11 @@ class Rectangle(Base):
         for attr in dict:
             self.int_validation(attr, dict[attr])
             self.pos_validation(attr, dict[attr])
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -103,14 +103,25 @@ class Rectangle(Base):
         height = self.height
         return f"[Rectangle] ({id}) {x}/{y} - {width}/{height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update attrs"""
-
-        try:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
-        except Exception as e:
-            pass
+        if len(args) != 0:
+            for i, dic in enumerate(self.__dict__):
+                self.__dict__[dic] = args[i]
+                if (len(args) - i) == 1:
+                    break
+        
+        elif len(args) == 0:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                elif key == 'width':
+                    self.width = value
+                elif key == 'height':
+                    self.height = value
+                elif key == 'x':
+                    self.x = value
+                elif key == 'y':
+                    self.y = value
+                else:
+                    raise TypeError(f"No attr named {key}")
