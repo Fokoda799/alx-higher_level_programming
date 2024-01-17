@@ -110,7 +110,7 @@ class Rectangle(Base):
                 self.__dict__[dic] = args[i]
                 if (len(args) - i) == 1:
                     break
-        
+
         elif len(args) == 0:
             for key, value in kwargs.items():
                 if key == 'id':
