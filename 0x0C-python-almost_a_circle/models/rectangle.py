@@ -102,3 +102,15 @@ class Rectangle(Base):
         width = self.width
         height = self.height
         return f"[Rectangle] ({id}) {x}/{y} - {width}/{height}"
+
+    def update(self, *args):
+        """Update attrs"""
+
+        try:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+        except Exception as e:
+            pass
