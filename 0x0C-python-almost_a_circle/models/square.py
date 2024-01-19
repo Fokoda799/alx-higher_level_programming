@@ -23,3 +23,5 @@ class Square(Rectangle):
         super().int_validation('width', value)
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs) 

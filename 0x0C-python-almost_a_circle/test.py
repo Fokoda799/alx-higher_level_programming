@@ -1,7 +1,27 @@
 #!/usr/bin/python3
+"""the Square!"""
+from models.rectangle import Rectangle
 
-def test(*args, **kwargs):
-    print(args)
-    print(kwargs)
 
-test(1, 4, ok=7, lol=8)
+class Square(Rectangle):
+    """Square"""
+
+    def __init__(self, size, x=0, y=0, id=None):
+        """Privet attrs"""
+        super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        """Return square reprisntion"""
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    @property
+    def size(self):
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        super().int_validation('width', value)
+        self.width = value
+        self.height = value
+
+print(Square.__dict__)
