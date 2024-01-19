@@ -24,4 +24,6 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-print(Square.__dict__)
+
+test = Square(5, 6, 6, 6)
+print(test.__dict__)
