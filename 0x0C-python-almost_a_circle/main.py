@@ -1,29 +1,12 @@
 #!/usr/bin/python3
-""" 11-main """
+""" 101-main """
+from models.base import Base
+from models.rectangle import Rectangle
 from models.square import Square
 
 if __name__ == "__main__":
 
-    s1 = Square(5)
-    print(s1)
+    list_rectangles = [Rectangle(100, 40), Rectangle(90, 110, 30, 10), Rectangle(20, 25, 110, 80)]
+    list_squares = [Square(35), Square(15, 70, 50), Square(80, 30, 70)]
 
-    s1.update(10)
-    print(s1)
-
-    s1.update(1, 2)
-    print(s1)
-
-    s1.update(1, 2, 3)
-    print(s1)
-
-    s1.update(1, 2, 3, 4)
-    print(s1)
-
-    s1.update(x=12)
-    print(s1)
-
-    s1.update(size=7, y=1)
-    print(s1)
-
-    s1.update(size=7, id=89, y=1)
-    print(s1)
+    Base.draw(list_rectangles, list_squares)
