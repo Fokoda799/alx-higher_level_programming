@@ -6,8 +6,7 @@ from an unsorted list of integers """
 def find_peak(list_of_integers):
     """ function that finds a peak in a list of
     unsorted integers.
-    Args:
-        list_of_integers: list[int].
+    Args: list_of_integers: list[int].
     Return: returns the peak."""
     _len = len(list_of_integers)
     if _len == 0:
