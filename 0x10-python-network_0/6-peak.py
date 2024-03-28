@@ -8,9 +8,7 @@ def find_peak(list_of_integers):
     unsorted integers.
     Args:
         list_of_integers: list[int].
-    Return:
-        returns the peak.
-    """
+    Return: returns the peak."""
     _len = len(list_of_integers)
     if _len == 0:
         return None
