@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """ 0. What's my status? """
 
+import urllib.request
 
 if __name__ == "__main__":
-    from urllib.request import urlopen
-
-    with urlopen('https://alx-intranet.hbtn.io/status') as rep:
-        status = rep.read()
-    print("Body response: ")
-    print(f"\t- type: {type(status)}")
-    print("\t- content: ", status)
-    print("\t- utf8 content: ", status.decode('utf-8'))
+    with urllib.request.urlopen(
+            'https://alx-intranet.hbtn.io/status') as response:
+        html = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(html)))
+        print("\t- content: {}".format(html))
+        print("\t- utf8 content: {}".format(html.decode('utf-8')))
