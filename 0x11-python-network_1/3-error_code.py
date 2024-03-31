@@ -12,4 +12,4 @@ if __name__ == "__main__":
             body = rep.read()
         print(body.decode("utf-8"))
     except HTTPError as e:
-        print("Error code: ", e.code)
+        print("Error code: {}".format(e.code))
