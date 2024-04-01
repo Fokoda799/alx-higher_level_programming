@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """ 7. Error code """
 
-if __name__ == "__main__":
-    import requests
-    import sys
+import requests
+import sys
 
-    url = sys.argv[1]
-    r = requests.get(url)
-    if r.status_code >= 400:
-        print("Error code: {} ".format(r.status_code))
+
+if __name__ == "__main__":
+    res = requests.get(sys.argv[1])
+    if res.status_code >= 400:
+        print("Error code: {}".format(res.status_code))
     else:
-        print(r.text)
+        print(res.text)
